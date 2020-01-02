@@ -14,5 +14,7 @@
     "autoload": {
         "psr-4": {"Niyko\\Transpicious\\": "src/"}
     },
-    "require": {}
+    "require": {
+        "php": "^5.5",
+    }
 }
