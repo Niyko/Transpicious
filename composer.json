@@ -1,0 +1,17 @@
+{
+    "name": "niyko/transpicious",
+    "description": "A simple hello world composer package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Niyko",
+            "email": "support@creatyification.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {"Niyko\\Transpicious\\": "src/"}
+    },
+    "require": {}
+}
