@@ -9,7 +9,8 @@
             "email": "support@creatyification.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {"Niyko\\Transpicious\\": "src/"}
     },
