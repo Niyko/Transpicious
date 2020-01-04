@@ -13,9 +13,9 @@ composer require niyko/transpicious
 ## What if I don't use Composer
 1. Don't worry, We got you. Download the .zip version of Transpicious from this link.
 2. Un zip the file and extract it to your project's folder
-### &nbsp;
-<img src="https://i.imgur.com/du1wBbE.png" width="350">
 
+<img src="https://i.imgur.com/du1wBbE.png" width="350">
+### &nbsp;
 # How to use it
 ## If you are using `Laravel`
 ### 1. Add this line in to your `config/app.php` in the `aliases` array like this
@@ -23,6 +23,7 @@ composer require niyko/transpicious
     'Transpicious' => Niyko\Transpicious\Translator::class
 `````
 > Don't remove the other classes in the array, just add the above line in to it
+
 After adding the line to the file, the array `aliases` in `config/app.php` may look like this.
 #### Eg :
 `````Php
