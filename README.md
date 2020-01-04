@@ -14,16 +14,17 @@ composer require niyko/transpicious
 1. Don't worry, We got you. Download the .zip version of Transpicious from this link.
 2. Un zip the file and extract it to your project's folder
 ### &nbsp;
-![Transpicious amazing](https://i.imgur.com/du1wBbE.png | width=200)
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
+<img src="https://i.imgur.com/du1wBbE.png" width="350">
 
 # How to use it
 ## If you are using `Laravel`
-1. Add this line in to your `config/app.php`in the `aliases` array like this
+### 1. Add this line in to your `config/app.php` in the `aliases` array like this
 `````Php
     'Transpicious' => Niyko\Transpicious\Translator::class
 `````
 > Don't remove the other classes in the array, just add the above line in to it
+After adding the line to the file, the array `aliases` in `config/app.php` may look like this.
+#### Eg :
 `````Php
 'aliases' => [
         .......
@@ -32,3 +33,20 @@ composer require niyko/transpicious
         'Transpicious' => Niyko\Transpicious\Translator::class
 ],
 `````
+### 2. Writing the content with Transpicious
+#### Using Transpicious in `Laravel View`
+`````Html
+    <body>
+        <h1>{!! Transpicious::translate('hello') !!}</h1>
+        <p>{!! Transpicious::translate('world') !!}</p>
+    </body>
+`````
+#### Or using Transpicious in `Laravel Controller`
+`````Php
+     return Transpicious::translate('world');
+`````
+### 3. Changing the language from user part
+`````Php
+     return Transpicious::set_translate_to('sp');   // sp is the language code
+`````
+> You can find the full list of language code from the bottom of this readme
