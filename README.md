@@ -14,8 +14,12 @@ composer require niyko/transpicious
 1. Don't worry, We got you. Download the .zip version of Transpicious from this link.
 2. Un zip the file and extract it to your project's folder
 
+#### &nbsp;
+
 <img src="https://i.imgur.com/du1wBbE.png" width="350">
-### &nbsp;
+
+#### &nbsp;
+
 # How to use it
 ## If you are using `Laravel`
 ### 1. Add this line in to your `config/app.php` in the `aliases` array like this
