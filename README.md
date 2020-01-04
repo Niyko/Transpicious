@@ -1,5 +1,5 @@
 ![Transpicious logo](https://i.imgur.com/DE3eGQT.png)
-## Transpicious converts yours website's content in any language you want, automatically. 
+### Transpicious converts yours website's content in any language you want, automatically. 
 Yea, You heard it right, Now you can write the content of the website in any language and the user can change it any other language on wish. PHPGit is a web based terminal that can be used to push from your hosting server to your Github repo. PHPGit is like a clone of GIT desktop app. So most of the commands used for PHPGit is similar to GIT commands. PHPGit also partially supports `.gitignore` files.
 
 # Simple Installation, Even a baby can do it
