@@ -14,7 +14,8 @@ composer require niyko/transpicious
 1. Don't worry, We got you. Download the .zip version of Transpicious from this link.
 2. Un zip the file and extract it to your project's folder
 ### &nbsp;
-![Transpicious amazing](https://i.imgur.com/du1wBbE.png =40x)
+![Transpicious amazing](https://i.imgur.com/du1wBbE.png | width=200)
+![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
 
 # How to use it
 ## If you are using `Laravel`
