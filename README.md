@@ -55,3 +55,36 @@ After adding the line to the file, the array `aliases` in `config/app.php` may l
      return Transpicious::set_translate_to('sp');   // sp is the language code
 `````
 > You can find the full list of language code from the bottom of this readme
+
+# What if some of the automatically gentrated translation is wrong?
+If any translation that is automatically gentrated is worng, then you can define the correct on in the `custom translation`.
+To know more about how to add custom translations, keep reading the next topic.
+
+# Adding custom translations
+### `Method 1` Adding it in the custom translation file
+Inside the `Transpicious` folder (if you are using `composer` then it will be `vendor/niyko/transpicious`), there is a folder called `custom_translations`, inside that there is a file called `custom_translations.json`. You can add your custom translations in this file using the below syntax.
+`````Javascript
+     {
+        "LANGUAGE CODE OF CONVERTED FROM" : {
+            "CONTENT 1" : {
+                "1ST LANGUAGE CODE OF CONVERTED TO" : "TRANSLATION",
+                "2ND LANGUAGE CODE OF CONVERTED TO" : "TRANSLATION",
+            },
+            "CONTENT 2" : {
+                "1ST LANGUAGE CODE OF CONVERTED TO" : "TRANSLATION",
+                "2ND LANGUAGE CODE OF CONVERTED TO" : "TRANSLATION",
+            }
+        }
+    }
+`````
+#### Did'nt got it? Look at an example
+If I am using `Transpicious::translate('hello, I'm Lilly')` in the content, And if you want to change the automatic translation of this content in the `spanish` language, the the `custom_translations.json` file will look like this :
+`````Javascript
+     {
+        "en" : {
+            "hello, I'm Lilly" : {
+                "sp" : "hola soy lilly"
+            }
+        }
+    }
+`````
