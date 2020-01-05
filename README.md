@@ -112,4 +112,5 @@ This function is used to give the content of the website. `translate()` function
 | Parameters | Description | Requred | Value type | Example |
 | --- | --- | --- | --- | --- |
 | `CONTENT` | Content that needs to be translated | `String` | `YES` | `'hello'`, `'world'` |
+| `TRANSLATE TO` | The content will be translated to this language, Overidding the language given in `$_DEFAULT_CONVERT_TO` in `config.php`, <br> ***Note: This will only applied to this `CONTENT`, the rest on the website will be translated based on `config.php`*** | `String` | `NO` | `'en'`, `'sp'`, `'hi'` |
 | `TRANSLATE TO` | The content will be translated to this language, Overidding the language given in `$_DEFAULT_CONVERT_TO` in `config.php` | `String` | `NO` | `'en'`, `'sp'`, `'hi'` |
