@@ -20,6 +20,20 @@ composer require niyko/transpicious
 
 #### &nbsp;
 
+# Configuring Transpicious
+There is not that much configuration in Transpicious, All the configuration are given in the file `Transpicious/config.php` (if you are using `composer` then it will be `vendor/niyko/transpicious/config.php`). The configuration file will look like this :
+`````Php
+<?php
+    $_DEFAULT_CONVERT_FROM = "en";	
+    $_DEFAULT_CONVERT_TO = "en";
+?>
+`````
+### configuration definition
+| Variable | Description | Value type | Example |
+| --- | --- | --- | --- |
+| `$_DEFAULT_CONVERT_FROM` | Language code of the language which is used to write the content of the website | `String` - Language code | `'en'`, `'sp'`, `'hi'` |
+| `$_DEFAULT_CONVERT_TO` | Language code of the defualt language of the website, The content will be shown in this lanuage when the user is firstly enters the website | `String` - Language code | `'en'`, `'sp'`, `'hi'` |
+
 # How to use it
 ## If you are using `Laravel`
 ### 1. Add this line in to your `config/app.php` in the `aliases` array like this
@@ -77,7 +91,7 @@ Inside the `Transpicious` folder (if you are using `composer` then it will be `v
         }
     }
 `````
-#### Did'nt got it? Look at an example
+#### Didn't got it? Look at an example
 If I am using `Transpicious::translate('hello, I'm Lilly')` in the content, And if you want to change the automatic translation of this content in the `spanish` language, the the `custom_translations.json` file will look like this :
 `````Javascript
      {
@@ -88,3 +102,14 @@ If I am using `Transpicious::translate('hello, I'm Lilly')` in the content, And 
         }
     }
 `````
+# API
+## Transpicious::translate();
+This function is used to give the content of the website. `translate()` function supports three parameters which all of them are string, Which are :
+`````Php
+     Transpicious::translate('CONTENT', 'TRANSLATE TO', 'TRANSLATE FROM');
+`````
+### Function definition
+| Parameters | Description | Requred | Value type | Example |
+| --- | --- | --- | --- | --- |
+| `CONTENT` | Content that needs to be translated | `String` | `YES` | `'hello'`, `'world'` |
+| `TRANSLATE TO` | The content will be translated to this language, Overidding the language given in `$_DEFAULT_CONVERT_TO` in `config.php` | `String` | `NO` | `'en'`, `'sp'`, `'hi'` |
