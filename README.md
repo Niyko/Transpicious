@@ -111,9 +111,9 @@ This function is used to give the content of the website. `translate()` function
 ### Function definition
 | Parameters | Description | Requred | Value type | Example |
 | --- | --- | --- | --- | --- |
-| `CONTENT` | Content that needs to be translated | `String` | `YES` | `'hello'`, `'world'` |
-| `TRANSLATE TO` | The content will be translated to this language, Overidding the language given in `$_DEFAULT_CONVERT_TO` in `config.php`, <br> ***Note: This will only be applied to this `CONTENT`, the rest on the website will be translated based on `config.php` if this parameter is absent*** | `String` | `NO` | `'en'`, `'sp'`, `'hi'` |
-| `TRANSLATE FROM` | The content will be recognized as this language, Overidding the language given in `$_DEFAULT_CONVERT_FROM` in `config.php`, <br> ***Note: This will only be applied to this `CONTENT`, the content on rest of the website will be recognized based on `config.php` if this parameter is absent*** | `String` | `NO` | `'en'`, `'sp'`, `'hi'` |
+| `CONTENT` | Content that needs to be translated | `YES` | `String` | `'hello'`, `'world'` |
+| `TRANSLATE TO` | The content will be translated to this language, Overidding the language given in `$_DEFAULT_CONVERT_TO` in `config.php`, <br> ***Note: This will only be applied to this `CONTENT`, the rest on the website will be translated based on `config.php` if this parameter is absent*** | `NO` | `String` - Language code | `'en'`, `'sp'`, `'hi'` |
+| `TRANSLATE FROM` | The content will be recognized as this language, Overidding the language given in `$_DEFAULT_CONVERT_FROM` in `config.php`, <br> ***Note: This will only be applied to this `CONTENT`, the content on rest of the website will be recognized based on `config.php` if this parameter is absent*** | `NO` | `String` - Language code | `'en'`, `'sp'`, `'hi'` |
 
 #### Example usage : 
 *If the `config.php` is set as `$_DEFAULT_CONVERT_FROM = "en"` and `$_DEFAULT_CONVERT_TO = "en"`*
@@ -122,4 +122,41 @@ This function is used to give the content of the website. `translate()` function
      Transpicious::translate('Friends don’t lie', 'sp');                // Returns Los amigos no mienten
      Transpicious::translate('Los amigos no mienten', 'ch', 'sp');      // Returns 朋友不撒谎
      Transpicious::translate('Los amigos no mienten', null, 'sp');      // Returns Friends don’t lie
+`````
+## Transpicious::set_translate_to();
+This function is used to change the current language of the website. All the content of the website will be translated to the language that is given as the parameter of this function
+`````Php
+     Transpicious::set_translate_to('TRANSLATE TO');
+`````
+### Function definition
+| Parameters | Description | Requred | Value type | Example |
+| --- | --- | --- | --- | --- |
+| 'TRANSLATE TO' | The whole website's content will be translated to this language | `YES` | `String` - Language code | `NO` | `'en'`, `'sp'`, `'hi'` |
+
+#### Example usage :
+##### Example (1)
+*If the `config.php` is set as `$_DEFAULT_CONVERT_FROM = "en"` and `$_DEFAULT_CONVERT_TO = "en"`*
+`````Php
+     Transpicious::set_translate_to('sp');
+     echo Transpicious::translate('She‘s our friend and she‘s crazy.');
+     
+     // The output will be : Ella es nuestra amiga y está loca
+`````
+
+##### Example (2)
+*If the `config.php` is set as `$_DEFAULT_CONVERT_FROM = "en"` and `$_DEFAULT_CONVERT_TO = "en"`*
+`````Php
+     Transpicious::set_translate_to('sp');
+     echo Transpicious::translate('Mornings are for coffee and contemplation');
+     echo Transpicious::translate('Mornings are for coffee and contemplation', 'ar');   // <= Note that translate() has a 2nd parameter
+     
+     /* The output will be :-
+        Las mañanas son para el café y la contemplación.
+        الصباح لتناول القهوة والتأمل
+     */
+`````
+## Transpicious::clear_cache();
+Used to clear the cached translations files, *Note: After clearing the cache, the site will take sometime to render on first run*
+`````Php
+     Transpicious::clear_cache();
 `````
