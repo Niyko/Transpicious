@@ -112,5 +112,14 @@ This function is used to give the content of the website. `translate()` function
 | Parameters | Description | Requred | Value type | Example |
 | --- | --- | --- | --- | --- |
 | `CONTENT` | Content that needs to be translated | `String` | `YES` | `'hello'`, `'world'` |
-| `TRANSLATE TO` | The content will be translated to this language, Overidding the language given in `$_DEFAULT_CONVERT_TO` in `config.php`, <br> ***Note: This will only applied to this `CONTENT`, the rest on the website will be translated based on `config.php`*** | `String` | `NO` | `'en'`, `'sp'`, `'hi'` |
-| `TRANSLATE TO` | The content will be translated to this language, Overidding the language given in `$_DEFAULT_CONVERT_TO` in `config.php` | `String` | `NO` | `'en'`, `'sp'`, `'hi'` |
+| `TRANSLATE TO` | The content will be translated to this language, Overidding the language given in `$_DEFAULT_CONVERT_TO` in `config.php`, <br> ***Note: This will only be applied to this `CONTENT`, the rest on the website will be translated based on `config.php` if this parameter is absent*** | `String` | `NO` | `'en'`, `'sp'`, `'hi'` |
+| `TRANSLATE FROM` | The content will be recognized as this language, Overidding the language given in `$_DEFAULT_CONVERT_FROM` in `config.php`, <br> ***Note: This will only be applied to this `CONTENT`, the content on rest of the website will be recognized based on `config.php` if this parameter is absent*** | `String` | `NO` | `'en'`, `'sp'`, `'hi'` |
+
+#### Example usage : 
+*If the `config.php` is set as `$_DEFAULT_CONVERT_FROM = "en"` and `$_DEFAULT_CONVERT_TO = "en"`*
+`````Php
+     Transpicious::translate('Friends don’t lie');                      // Returns Friends don’t lie
+     Transpicious::translate('Friends don’t lie', 'sp');                // Returns Los amigos no mienten
+     Transpicious::translate('Los amigos no mienten', 'ch', 'sp');      // Returns 朋友不撒谎
+     Transpicious::translate('Los amigos no mienten', null, 'sp');      // Returns Friends don’t lie
+`````
