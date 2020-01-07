@@ -42,7 +42,7 @@ After adding the line to the file, the array `aliases` in `config/app.php` may l
 `````Php
      Transpicious::set_translate_to('es');   // es is the language code
 `````
-> You can find the full list of language code from the bottom of this readme
+> You can find the full list of language code, [CLICK HERE](https://github.com/Niyko/Transpicious/blob/master/supported_language_codes.md).
 -----------------------------------------------------------------------------
 ## If you are using `Codeigniter`
 ### 1. Open the terminal from the `application` folder inside your project, and Run this command in your command line:
@@ -88,7 +88,7 @@ And to change the language use,
 `````Php
      Transpicious::set_translate_to('es');   // es is the language code
 `````
-> You can find the full list of language code from the bottom of this readme
+> You can find the full list of language code, [CLICK HERE](https://github.com/Niyko/Transpicious/blob/master/supported_language_codes.md).
 -----------------------------------------------------------------------------
 ## If you are using `Normal PHP`, Like me
 #### 1. Download the .zip version of Transpicious from this link, 
