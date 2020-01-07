@@ -3,7 +3,7 @@
 Yea, You heard it right, Now you can write the content of the website in any language and the user can change it any other language on wish. Transpicious automatically converts the website's content to any one of 90 supported language on the fly. Transpicious supports is Laravel, Codeigniter and Normal PHP. This is a very useful package to integrate multi language (multi locale) functionality to your code. You can also give custom translations if needed.
 
 # Simple Installation, Even a baby can do it
-## You can install via `Composer` or downloading the `Source zip`.
+**You can install via `Composer` or downloading the `Source zip`.**
 You can install Transpicious via Composer or by downloading the source code from the github repository, Continue reading for knowing more about installing Transpicious. Don't worry its super super easy.
 
 ## If you are using `Laravel`
@@ -92,7 +92,7 @@ And to change the language use,
 > You can find the full list of language code, [CLICK HERE](https://github.com/Niyko/Transpicious/blob/master/supported_language_codes.md).
 -----------------------------------------------------------------------------
 ## If you are using `Normal PHP`, Like me
-#### 1. Download the .zip version of Transpicious from this link, 
+#### 1. Download the .zip version of Transpicious from this link,[CLICK HERE](https://github.com/Niyko/Transpicious/archive/1.0.0.zip). 
 #### 2. Unzip the file and extract it to your project's folder
 #### 3. In the top of your php file, add this line 
 `````Php
@@ -124,42 +124,6 @@ There is not that much configuration in Transpicious, All the configuration are 
 | --- | --- | --- | --- |
 | `$_DEFAULT_CONVERT_FROM` | Language code of the language which is used to write the content of the website | `String` - Language code | `'en'`, `'sp'`, `'hi'` |
 | `$_DEFAULT_CONVERT_TO` | Language code of the defualt language of the website, The content will be shown in this lanuage when the user is firstly enters the website | `String` - Language code | `'en'`, `'sp'`, `'hi'` |
-
-# How to use it
-## If you are using `Laravel`
-### 1. Add this line in to your `config/app.php` in the `aliases` array like this
-`````Php
-    'Transpicious' => Niyko\Transpicious\Transpicious::class
-`````
-> Don't remove the other classes in the array, just add the above line in to it
-
-After adding the line to the file, the array `aliases` in `config/app.php` may look like this.
-#### Eg :
-`````Php
-'aliases' => [
-        .......
-        'Validator' => Illuminate\Support\Facades\Validator::class,
-        'View' => Illuminate\Support\Facades\View::class,
-        'Transpicious' => Niyko\Transpicious\Transpicious::class
-],
-`````
-### 2. Writing the content with Transpicious
-#### Using Transpicious in `Laravel View`
-`````Html
-    <body>
-        <h1>{!! Transpicious::translate('hello') !!}</h1>
-        <p>{!! Transpicious::translate('world') !!}</p>
-    </body>
-`````
-#### Or using Transpicious in `Laravel Controller`
-`````Php
-     return Transpicious::translate('world');
-`````
-### 3. Changing the language from user part
-`````Php
-     return Transpicious::set_translate_to('es');   // es is the language code
-`````
-> You can find the full list of language code from the bottom of this readme
 
 # What if some of the automatically gentrated translation is wrong?
 If any translation that is automatically gentrated is worng, then you can define the correct on in the `custom translation`.
