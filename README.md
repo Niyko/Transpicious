@@ -91,13 +91,13 @@ And to change the language use,
 > You can find the full list of language code from the bottom of this readme
 -----------------------------------------------------------------------------
 ## If you are using `Normal PHP`, Like me
-### 1. Download the .zip version of Transpicious from this link, 
-### 2. Unzip the file and extract it to your project's folder
-### 3. In the top of your php file, add this line 
+#### 1. Download the .zip version of Transpicious from this link, 
+#### 2. Unzip the file and extract it to your project's folder
+#### 3. In the top of your php file, add this line 
 `````Php
      use Niyko\Transpicious\Transpicious;
 `````
-### 4. And to use Transpicious, to print content, use like
+#### 4. And to use Transpicious, to print content, use like
 `````Html
     <body>
         <h1><?php echo Transpicious::translate('hello') ?></h1>
