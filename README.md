@@ -250,3 +250,5 @@ Used to clear the cached translations files, *Note: After clearing the cache, th
 `````Php
      Transpicious::clear_cache();
 `````
+# License
+PHPGit is licensed under the [GNU GENERAL PUBLIC LICENSE](https://github.com/Niyko/Transpicious/blob/master/LICENSE).
