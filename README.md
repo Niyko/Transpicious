@@ -66,8 +66,8 @@ In the top of the View add this line
 And use Transpicious in the view's html like
 `````Html
     <body>
-        <h1>{!! Transpicious::translate('hello') !!}</h1>
-        <p>{!! Transpicious::translate('world') !!}</p>
+        <h1><?php echo Transpicious::translate('hello') ?></h1>
+        <p><?php echo Transpicious::translate('world') ?></p>
     </body>
 `````
 #### Or using Transpicious in `Codeigniter Controller`
@@ -90,15 +90,20 @@ And to change the language use,
 `````
 > You can find the full list of language code from the bottom of this readme
 -----------------------------------------------------------------------------
-## If you are using Composer
-Open the terminal from the folder and Run this command in your command line:
+## If you are using `Normal PHP`, Like me
+### 1. Download the .zip version of Transpicious from this link, 
+### 2. Unzip the file and extract it to your project's folder
+### 3. In the top of your php file, add this line 
+`````Php
+     use Niyko\Transpicious\Transpicious;
 `````
-composer require niyko/transpicious
+### 4. And to use Transpicious, to print content, use like
+`````Html
+    <body>
+        <h1><?php echo Transpicious::translate('hello') ?></h1>
+        <p><?php echo Transpicious::translate('world') ?></p>
+    </body>
 `````
-## What if, I don't use Composer?
-1. Don't worry, We got you. Download the .zip version of Transpicious from this link.
-2. Un zip the file and extract it to your project's folder
-
 #### &nbsp;
 
 <img src="https://i.imgur.com/du1wBbE.png" width="350">
@@ -106,7 +111,7 @@ composer require niyko/transpicious
 #### &nbsp;
 
 # Configuring Transpicious
-There is not that much configuration in Transpicious, All the configuration are given in the file `Transpicious/config.php` (if you are using `composer` then it will be `vendor/niyko/transpicious/config.php`). The configuration file will look like this :
+There is not that much configuration in Transpicious, All the configuration are given in the file `Transpicious-1.0.0/config.php` (if you are using `composer` then it will be `vendor/niyko/transpicious/config.php`). The configuration file will look like this :
 `````Php
 <?php
     $_DEFAULT_CONVERT_FROM = "en";	
