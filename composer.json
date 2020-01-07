@@ -1,6 +1,6 @@
 {
     "name": "niyko/transpicious",
-    "description": "A simple hello world composer package",
+    "description": "Transpicious converts yours website's content in any language you want, automatically, You can also give custom translations if needed. Transpicious supports is Laravel, Codeigniter and Normal PHP",
     "type": "library",
     "version": "1.0.0",
     "license": "MIT",
