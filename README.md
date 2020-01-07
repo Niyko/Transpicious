@@ -66,7 +66,7 @@ After adding the line to the file, the array `aliases` in `config/app.php` may l
 `````
 ### 3. Changing the language from user part
 `````Php
-     return Transpicious::set_translate_to('sp');   // sp is the language code
+     return Transpicious::set_translate_to('es');   // es is the language code
 `````
 > You can find the full list of language code from the bottom of this readme
 
@@ -97,7 +97,7 @@ If I am using `Transpicious::translate('hello, I'm Lilly')` in the content, And 
      {
         "en" : {
             "hello, I'm Lilly" : {
-                "sp" : "hola soy lilly"
+                "es" : "hola soy lilly"
             }
         }
     }
@@ -119,9 +119,9 @@ This function is used to give the content of the website. `translate()` function
 *If the `config.php` is set as `$_DEFAULT_CONVERT_FROM = "en"` and `$_DEFAULT_CONVERT_TO = "en"`*
 `````Php
      Transpicious::translate('Friends don’t lie');                      // Returns Friends don’t lie
-     Transpicious::translate('Friends don’t lie', 'sp');                // Returns Los amigos no mienten
-     Transpicious::translate('Los amigos no mienten', 'ch', 'sp');      // Returns 朋友不撒谎
-     Transpicious::translate('Los amigos no mienten', null, 'sp');      // Returns Friends don’t lie
+     Transpicious::translate('Friends don’t lie', 'es');                // Returns Los amigos no mienten
+     Transpicious::translate('Los amigos no mienten', 'ch', 'es');      // Returns 朋友不撒谎
+     Transpicious::translate('Los amigos no mienten', null, 'es');      // Returns Friends don’t lie
 `````
 ## Transpicious::set_translate_to();
 This function is used to change the current language of the website. All the content of the website will be translated to the language that is given as the parameter of this function
@@ -131,13 +131,13 @@ This function is used to change the current language of the website. All the con
 ### Function definition
 | Parameters | Description | Requred | Value type | Example |
 | --- | --- | --- | --- | --- |
-| 'TRANSLATE TO' | The whole website's content will be translated to this language | `YES` | `String` - Language code | `NO` | `'en'`, `'sp'`, `'hi'` |
+| 'TRANSLATE TO' | The whole website's content will be translated to this language | `YES` | `String` - Language code | `NO` | `'en'`, `'es'`, `'hi'` |
 
 #### Example usage :
 ##### Example (1)
 *If the `config.php` is set as `$_DEFAULT_CONVERT_FROM = "en"` and `$_DEFAULT_CONVERT_TO = "en"`*
 `````Php
-     Transpicious::set_translate_to('sp');
+     Transpicious::set_translate_to('es');
      echo Transpicious::translate('She‘s our friend and she‘s crazy.');
      
      // The output will be : Ella es nuestra amiga y está loca
@@ -146,7 +146,7 @@ This function is used to change the current language of the website. All the con
 ##### Example (2)
 *If the `config.php` is set as `$_DEFAULT_CONVERT_FROM = "en"` and `$_DEFAULT_CONVERT_TO = "en"`*
 `````Php
-     Transpicious::set_translate_to('sp');
+     Transpicious::set_translate_to('es');
      echo Transpicious::translate('Mornings are for coffee and contemplation');
      echo Transpicious::translate('Mornings are for coffee and contemplation', 'ar');   // <= Note that translate() has a 2nd parameter
      
