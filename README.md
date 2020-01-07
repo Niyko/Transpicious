@@ -5,12 +5,97 @@ Yea, You heard it right, Now you can write the content of the website in any lan
 # Simple Installation, Even a baby can do it
 You can install Transpicious via Composer or by downloading the source code from the github repository, Continue reading for knowing more about installing Transpicious. Don't worry its super super easy.
 
+## If you are using `Laravel`
+### 1. Open the terminal from the project folder and Run this command in your command line:
+`````
+    composer require niyko/transpicious
+`````
+### 2. Add this line in to your `config/app.php` in the `aliases` array like this
+`````Php
+    'Transpicious' => Niyko\Transpicious\Transpicious::class
+`````
+> Don't remove the other classes in the array, just add the above line in to it
+
+After adding the line to the file, the array `aliases` in `config/app.php` may look like this.
+#### Eg :
+`````Php
+'aliases' => [
+        .......
+        'Validator' => Illuminate\Support\Facades\Validator::class,
+        'View' => Illuminate\Support\Facades\View::class,
+        'Transpicious' => Niyko\Transpicious\Transpicious::class
+],
+`````
+### 3. Writing the content with Transpicious
+#### Using Transpicious in `Laravel View`
+`````Html
+    <body>
+        <h1>{!! Transpicious::translate('hello') !!}</h1>
+        <p>{!! Transpicious::translate('world') !!}</p>
+    </body>
+`````
+#### Or using Transpicious in `Laravel Controller`
+`````Php
+     return Transpicious::translate('world');
+`````
+### 4. Changing the language from user part
+`````Php
+     Transpicious::set_translate_to('es');   // es is the language code
+`````
+> You can find the full list of language code from the bottom of this readme
+-----------------------------------------------------------------------------
+## If you are using `Codeigniter`
+### 1. Open the terminal from the `application` folder inside your project, and Run this command in your command line:
+`````
+    composer require niyko/transpicious
+`````
+### 2. Open `YOUR PROJECT/application/config.php` and change the value of `$config['composer_autoload']` to `TRUE`
+Like shown here :
+`````Php
+    $config['composer_autoload'] = TRUE;
+`````
+> This line will be seen right around line number 140
+### 3. Writing the content with Transpicious
+#### Using Transpicious in `Codeigniter View`
+In the top of the View add this line
+`````Php
+    <?php
+        use Niyko\Transpicious\Transpicious;
+    ?>
+`````
+And use Transpicious in the view's html like
+`````Html
+    <body>
+        <h1>{!! Transpicious::translate('hello') !!}</h1>
+        <p>{!! Transpicious::translate('world') !!}</p>
+    </body>
+`````
+#### Or using Transpicious in `Codeigniter Controller`
+In the top of the View add this line
+`````Php
+     use Niyko\Transpicious\Transpicious;
+`````
+And in the controller use Transpicious like 
+`````Php
+     return Transpicious::translate('world');
+`````
+### 4. Changing the language from user part
+In the top of the View add this line
+`````Php
+     use Niyko\Transpicious\Transpicious;
+`````
+And to change the language use,
+`````Php
+     Transpicious::set_translate_to('es');   // es is the language code
+`````
+> You can find the full list of language code from the bottom of this readme
+-----------------------------------------------------------------------------
 ## If you are using Composer
 Open the terminal from the folder and Run this command in your command line:
 `````
 composer require niyko/transpicious
 `````
-## What if I don't use Composer
+## What if, I don't use Composer?
 1. Don't worry, We got you. Download the .zip version of Transpicious from this link.
 2. Un zip the file and extract it to your project's folder
 
@@ -38,7 +123,7 @@ There is not that much configuration in Transpicious, All the configuration are 
 ## If you are using `Laravel`
 ### 1. Add this line in to your `config/app.php` in the `aliases` array like this
 `````Php
-    'Transpicious' => Niyko\Transpicious\Translator::class
+    'Transpicious' => Niyko\Transpicious\Transpicious::class
 `````
 > Don't remove the other classes in the array, just add the above line in to it
 
@@ -49,7 +134,7 @@ After adding the line to the file, the array `aliases` in `config/app.php` may l
         .......
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Transpicious' => Niyko\Transpicious\Translator::class
+        'Transpicious' => Niyko\Transpicious\Transpicious::class
 ],
 `````
 ### 2. Writing the content with Transpicious
