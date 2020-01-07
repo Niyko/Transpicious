@@ -218,4 +218,4 @@ Used to clear the cached translations files, *Note: After clearing the cache, th
 # All supported language codes
 [CLICK HERE](https://github.com/Niyko/Transpicious/blob/master/supported_language_codes.md) to check out all the language codes supported in Transpicious for automatic translation.
 # License
-PHPGit is licensed under the [GNU GENERAL PUBLIC LICENSE](https://github.com/Niyko/Transpicious/blob/master/LICENSE).
+Transpicious is licensed under the [GNU GENERAL PUBLIC LICENSE](https://github.com/Niyko/Transpicious/blob/master/LICENSE), And this repo is made for educational purpose.
