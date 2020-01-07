@@ -1,8 +1,9 @@
 ![Transpicious logo](https://i.imgur.com/teaPjJw.png)
 ### Transpicious converts yours website's content in any language you want, automatically. 
-Yea, You heard it right, Now you can write the content of the website in any language and the user can change it any other language on wish. PHPGit is a web based terminal that can be used to push from your hosting server to your Github repo. PHPGit is like a clone of GIT desktop app. So most of the commands used for PHPGit is similar to GIT commands. PHPGit also partially supports `.gitignore` files.
+Yea, You heard it right, Now you can write the content of the website in any language and the user can change it any other language on wish. Transpicious automatically converts the website's content to any one of 90 supported language on the fly. Transpicious supports is Laravel, Codeigniter and Normal PHP. This is a very useful package to integrate multi language (multi locale) functionality to your code. You can also give custom translations if needed.
 
 # Simple Installation, Even a baby can do it
+## You can install via `Composer` or downloading the `Source zip`.
 You can install Transpicious via Composer or by downloading the source code from the github repository, Continue reading for knowing more about installing Transpicious. Don't worry its super super easy.
 
 ## If you are using `Laravel`
