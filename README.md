@@ -158,7 +158,7 @@ If I am using `Transpicious::translate('hello, I'm Lilly')` in the content, And 
         }
     }
 `````
-## :pencil: API
+## :books: API
 ### Transpicious::translate();
 This function is used to give the content of the website. `translate()` function supports three parameters which all of them are string, Which are :
 `````Php
