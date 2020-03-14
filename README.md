@@ -1,9 +1,9 @@
 ![Transpicious logo](https://i.imgur.com/teaPjJw.png)
 ### Transpicious converts yours website's content in any language you want, automatically. 
-Yea, You heard it right, Now you can write the content of the website in any language and the user can change it any other language on wish. Transpicious automatically converts the website's content to any one of 90 supported language on the fly. Transpicious supports is Laravel, Codeigniter and Normal PHP. This is a very useful package to integrate multi language (multi locale) functionality to your code. You can also give custom translations if needed.
+Yea, You heard it right, Now you can write the content of the website in any language and the user can change it to any other language on wish. Transpicious automatically converts the website's contents to any one of the 90 supported language on the fly. Transpicious supports is Laravel, Codeigniter and core PHP. This is a very useful package to integrate multi language (multi locale) functionality to your code. You can also give custom translations if needed.
 
-# Simple Installation, Even a baby can do it
-**You can install via `Composer` or downloading the `Source zip`.**
+# :cyclone: Simple Installation, Even a baby :baby: can do it
+**You can install via `Composer` or by downloading the `Source zip`.**
 You can install Transpicious via Composer or by downloading the source code from the github repository, Continue reading for knowing more about installing Transpicious. Don't worry its super super easy.
 
 ## If you are using `Laravel`
@@ -21,9 +21,10 @@ After adding the line to the file, the array `aliases` in `config/app.php` may l
 #### Eg :
 `````Php
 'aliases' => [
-        .......
         'Validator' => Illuminate\Support\Facades\Validator::class,
-        'View' => Illuminate\Support\Facades\View::class,
+        'View' => Illuminate\Support\Facade.................
+        .......
+        .......
         'Transpicious' => Niyko\Transpicious\Transpicious::class
 ],
 `````
@@ -91,7 +92,7 @@ And to change the language use,
 `````
 > You can find the full list of language code, [CLICK HERE](https://github.com/Niyko/Transpicious/blob/master/supported_language_codes.md).
 
-## If you are using `Normal PHP`, Like me
+## If you are using `Core PHP`, Like me :wink:
 #### 1. Download the .zip version of Transpicious from this link,[CLICK HERE](https://github.com/Niyko/Transpicious/archive/1.0.0.zip). 
 #### 2. Unzip the file and extract it to your project's folder
 #### 3. In the top of your php file, add this line 
@@ -111,8 +112,8 @@ And to change the language use,
 
 #### &nbsp;
 
-# Configuring Transpicious
-There is not that much configuration in Transpicious, All the configuration are given in the file `Transpicious-1.0.0/config.php` (if you are using `composer` then it will be `vendor/niyko/transpicious/config.php`). The configuration file will look like this :
+# :gear: Configuring Transpicious
+There is not that much configurations in Transpicious, All the configuration are given in the file `Transpicious-1.0.0/config.php` (if you are using `composer` then it will be `vendor/niyko/transpicious/config.php`). The configuration file will look like this :
 `````Php
 <?php
     $_DEFAULT_CONVERT_FROM = "en";	
@@ -129,7 +130,7 @@ There is not that much configuration in Transpicious, All the configuration are 
 If any translation that is automatically gentrated is worng, then you can define the correct on in the `custom translation`.
 To know more about how to add custom translations, keep reading the next topic.
 
-# Adding custom translations
+# :pencil: Adding custom translations
 ### `Method 1` Adding it in the custom translation file
 Inside the `Transpicious` folder (if you are using `composer` then it will be `vendor/niyko/transpicious`), there is a folder called `custom_translations`, inside that there is a file called `custom_translations.json`. You can add your custom translations in this file using the below syntax.
 `````Javascript
@@ -157,7 +158,7 @@ If I am using `Transpicious::translate('hello, I'm Lilly')` in the content, And 
         }
     }
 `````
-# API
+# :pencil: API
 ## Transpicious::translate();
 This function is used to give the content of the website. `translate()` function supports three parameters which all of them are string, Which are :
 `````Php
@@ -215,7 +216,7 @@ Used to clear the cached translations files, *Note: After clearing the cache, th
 `````Php
      Transpicious::clear_cache();
 `````
-# All supported language codes
+# :globe_with_meridians: All supported language codes
 [CLICK HERE](https://github.com/Niyko/Transpicious/blob/master/supported_language_codes.md) to check out all the language codes supported in Transpicious for automatic translation.
-# License
+# :page_with_curl: License
 Transpicious is licensed under the [GNU GENERAL PUBLIC LICENSE](https://github.com/Niyko/Transpicious/blob/master/LICENSE), And this repo is made for educational purpose.
