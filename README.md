@@ -92,7 +92,7 @@ And to change the language use,
 `````
 > You can find the full list of language code, [CLICK HERE](https://github.com/Niyko/Transpicious/blob/master/supported_language_codes.md).
 
-### If you are using `Core PHP`, Like me :wink:
+### If you are using `Core PHP`
 ##### 1. Download the .zip version of Transpicious from this link,[CLICK HERE](https://github.com/Niyko/Transpicious/archive/1.0.0.zip). 
 ##### 2. Unzip the file and extract it to your project's folder
 ##### 3. In the top of your php file, add this line 
